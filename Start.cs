@@ -22,7 +22,7 @@ namespace EggInABin {
 				foreach (var item in binLocations.ToArray()) {
 					if (item.Value.Item1 && Game.LocalPlayer.Character.Position.DistanceTo(item.Value.Item2) <= 5) {
 						binLocations[item.Key] = new Tuple<Boolean, Vector3>(false, item.Value.Item2);
-						World.SpawnExplosion(item.Value.Item2, 43, 8, true, false, 1.0f);
+						World.SpawnExplosion(item.Value.Item2, 43, 20, true, false, 1.0f);
 					}
 				}
 
